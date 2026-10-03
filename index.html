@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Abdel Moghny | Junior Full-Stack Developer & BIS Undergrad (AAST)</title>
+  <meta name="description" content="Portfolio of Mohamed Abdel Moghny - Junior Full-Stack Developer & Business Information Systems (BIS) undergraduate at AAST. Hands-on experience in Java, Spring Boot, REST APIs, SQL, and Web Development.">
+  <meta name="keywords" content="Mohamed Abdel Moghny, Mohamed Moghny, Junior Full Stack Developer, Business Information Systems, AAST, Spring Boot, Java, REST APIs, SQL, Egypt">
+  <meta name="author" content="Mohamed Abdel Moghny">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Mohamed Abdel Moghny | Junior Full-Stack Developer">
+  <meta property="og:description" content="Business Information Systems Undergraduate at AAST | Hands-on experience at Qeema, CIB, and EGAS.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Constellation Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Mouse Spotlight Glow -->
+  <div id="mouse-spotlight" class="mouse-spotlight" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Mohamed Abdel Moghny Homepage">
+        <span class="logo-accent">&lt;</span>Moghny<span class="logo-accent"> /&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">02.</span> Experience & Education</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">03.</span> Projects</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">04.</span> Skills</a>
+        <a href="#leadership" class="nav-link"><span class="nav-num">05.</span> Leadership</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">06.</span> Contact</a>
+        <a href="mailto:moghnymohamed60@gmail.com" class="nav-btn-hire">Get In Touch</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark / light theme" title="Toggle theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="section-container hero-container">
+        <div class="hero-content">
+          <div class="hero-status-pill reveal-item">
+            <span class="pulse-beacon"></span>
+            <span>Undergraduate • Final-Year BIS Student @ AAST</span>
+          </div>
+
+          <h1 class="hero-title reveal-item">
+            Hi, I'm <br>
+            <span class="gradient-name">Mohamed Abdel Moghny</span>
+          </h1>
+
+          <h2 class="hero-subtitle reveal-item">
+            <span id="typewriter" class="typewriter-text"></span><span class="typing-cursor">|</span>
+          </h2>
+
+          <p class="hero-bio reveal-item">
+            Final-year <strong>Business Information Systems (BIS)</strong> student at the <strong>Arab Academy for Science & Technology (AAST)</strong> (graduating 2027). Combining business process understanding, relational databases, and web development with hands-on backend training in <strong>Java</strong> and <strong>Spring Boot</strong>.
+          </p>
+
+          <div class="hero-buttons reveal-item">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+            <a href="#experience" class="btn btn-secondary">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Experience & Timeline</span>
+            </a>
+            <button id="copy-email-hero" class="btn btn-ghost" title="Click to copy email">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <div class="hero-social-row reveal-item">
+            <a href="https://www.linkedin.com/in/mohamed-moghny-596735390" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/moghnymohamed60-bot" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:moghnymohamed60@gmail.com" class="social-icon" aria-label="Email Me" title="Email Me">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-item">
+          <div class="avatar-orbit-wrapper">
+            <div class="orbiting-tag tag-java" title="Java"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="orbiting-tag tag-python" title="Python"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="orbiting-tag tag-postgres" title="PostgreSQL"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+            <div class="orbiting-tag tag-js" title="JavaScript"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="orbiting-tag tag-php" title="PHP"><i class="fa-brands fa-php"></i> PHP</div>
+
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-frame">
+              <img src="assets/avatar.jpg" alt="Mohamed Abdel Moghny" class="avatar-image" onerror="this.src='https://images.unsplash.com/photo-1534972195531-a756b1140f6c?w=600&auto=format&fit=crop&q=80'">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">01. Background & Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-text-column">
+            <p class="lead-text">
+              I am a final-year <strong>Business Information Systems (BIS)</strong> student at the <strong>Arab Academy for Science & Technology (AAST)</strong> in Cairo, enrolled in the 3-Year Accelerated Programme with expected graduation in 2027.
+            </p>
+            <p>
+              My background integrates <strong>business workflow analysis (UML, systems analysis)</strong> with <strong>practical software development</strong>. I have completed a specialized <strong>Backend Trainee program at Qeema</strong> building layered Spring Boot REST APIs, along with internships at <strong>Commercial International Bank (CIB)</strong> in Generative AI, <strong>EGAS</strong> in IT Network Security, and <strong>LXT</strong> in Workforce Operations.
+            </p>
+            <p>
+              As an undergraduate, I am passionate about learning, practicing clean code & SOLID principles, and steadily advancing my technical skill set from fundamentals to scalable enterprise systems.
+            </p>
+
+            <div class="highlight-pills">
+              <div class="pill-item"><i class="fa-solid fa-check-circle"></i> Java & Spring Boot REST APIs</div>
+              <div class="pill-item"><i class="fa-solid fa-check-circle"></i> Layered Architecture (Controller / Service / Repository)</div>
+              <div class="pill-item"><i class="fa-solid fa-check-circle"></i> Relational Database Design (ERD, SQL, PostgreSQL, H2)</div>
+              <div class="pill-item"><i class="fa-solid fa-check-circle"></i> Web Development (HTML, CSS, JS, PHP)</div>
+              <div class="pill-item"><i class="fa-solid fa-check-circle"></i> Testing with JUnit 5 & Mockito</div>
+              <div class="pill-item"><i class="fa-solid fa-check-circle"></i> Business & Systems Analysis (UML, SDLC)</div>
+            </div>
+          </div>
+
+          <div class="about-cards-grid">
+            <div class="feature-card">
+              <div class="feature-icon-box cyan-glow">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="feature-title">Academic Foundation</h3>
+              <p class="feature-desc">B.Sc. in Business Information Systems (AAST) • High School Diploma in Mathematics (Egyptian Language School - ELS).</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box purple-glow">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <h3 class="feature-title">Backend Trainee @ Qeema</h3>
+              <p class="feature-desc">Layered Spring Boot architecture, Spring Data JPA, Hibernate, DTOs, Mapper patterns, Docker containerization, and JUnit 5/Mockito.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box emerald-glow">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="feature-title">Enterprise & IT Security</h3>
+              <p class="feature-desc">Hands-on exposure to network infrastructure (OSI model, firewalls, DHCP, DNS, NAT) at EGAS, and GenAI banking applications at CIB.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box amber-glow">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h3 class="feature-title">Leadership & Communication</h3>
+              <p class="feature-desc">Middle Manager in B2B at AIESEC AAST Cairo, and Organizing Committee Member at Heliopolis Sporting Club.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline Section -->
+    <section id="experience" class="section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">02. Career & Education</span>
+          <h2 class="section-title">Work Experience & Internships</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Item: Qeema -->
+          <div class="timeline-item left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge exp-badge">Backend Trainee / Intern</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 12 Aug – 10 Sep 2026</span>
+              </div>
+              <h3 class="timeline-title">Qeema (Hybrid)</h3>
+              <h4 class="timeline-institution">Backend Development Trainee Program</h4>
+              <ul class="timeline-bullet-list">
+                <li>Completed an intensive backend program covering Java, Spring Boot, REST API design, and layered <strong>Controller / Service / Repository</strong> architecture.</li>
+                <li>Built a <strong>Restaurant Reservation System</strong> using Spring Data JPA, Hibernate, and an H2 database, with JUnit 5 and Mockito for unit and integration testing.</li>
+                <li>Practiced Clean Code and SOLID principles, applied Strategy and Mapper design patterns, and containerized the application with Docker.</li>
+                <li>Collaborated via Git/GitHub workflows and documented APIs with Postman; studied microservices fundamentals and event-driven communication.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Spring Data JPA</span>
+                <span>Hibernate</span>
+                <span>JUnit 5</span>
+                <span>Mockito</span>
+                <span>Docker</span>
+                <span>Postman</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item: CIB -->
+          <div class="timeline-item right">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge genai-badge">Internship</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+              </div>
+              <h3 class="timeline-title">Commercial International Bank (CIB) — Remote</h3>
+              <h4 class="timeline-institution">Generative AI Intern</h4>
+              <ul class="timeline-bullet-list">
+                <li>Explored AI & Machine Learning fundamentals and their strategic applications within the retail banking ecosystem.</li>
+                <li>Gained awareness of digital banking, financial inclusion, sustainable finance, and ESG frameworks.</li>
+                <li>Examined the role of data, analytics, and cybersecurity in supporting customer experience and operational controls.</li>
+                <li>Developed professional skills in personal branding, inclusive interpersonal communication, and corporate workflows.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Generative AI</span>
+                <span>Machine Learning</span>
+                <span>Digital Banking</span>
+                <span>Data Analytics</span>
+                <span>ESG</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item: EGAS -->
+          <div class="timeline-item left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge sec-badge">IT Security Intern</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 12 Jul – 5 Aug 2026</span>
+              </div>
+              <h3 class="timeline-title">Egyptian Natural Gas Holding Company (EGAS)</h3>
+              <h4 class="timeline-institution">IT Security Department</h4>
+              <ul class="timeline-bullet-list">
+                <li>Gained foundational hands-on exposure to enterprise network security concepts, the OSI model, and layer-by-layer data governance.</li>
+                <li>Learned switch configuration principles and firewall security policies for controlling inbound and outbound network traffic.</li>
+                <li>Studied core network infrastructure services: DHCP, DNS, proxy servers, NAT, and Network Access Control (NAC).</li>
+                <li>Collaborated with a cross-functional team on development and requirements for EGAS's internal <strong>Travel Reimbursement System</strong>.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Network Security</span>
+                <span>Firewalls</span>
+                <span>OSI Model</span>
+                <span>DNS / DHCP</span>
+                <span>NAT & NAC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item: LXT -->
+          <div class="timeline-item right">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge data-badge">Internship</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 1 Month</span>
+              </div>
+              <h3 class="timeline-title">LXT Company</h3>
+              <h4 class="timeline-institution">Workforce Department Intern</h4>
+              <ul class="timeline-bullet-list">
+                <li>Gained hands-on experience in workforce operations, data management, reporting, and structured Excel analysis.</li>
+                <li>Introduced to Microsoft Power BI, learning to build fundamental dashboards and leverage data visualization for workforce decision-making support.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Microsoft Excel</span>
+                <span>Microsoft Power BI</span>
+                <span>Workforce Operations</span>
+                <span>Data Reporting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item: Education AAST -->
+          <div class="timeline-item left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge edu-badge">Undergraduate Degree</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2024 – Present (Exp. 2027)</span>
+              </div>
+              <h3 class="timeline-title">B.Sc. in Business Information Systems (BIS)</h3>
+              <h4 class="timeline-institution">Arab Academy for Science & Technology (AAST)</h4>
+              <p class="timeline-description">
+                3-Year Accelerated Programme combining Computer Science, Systems Analysis, and Business Management.
+              </p>
+              <div class="timeline-tags">
+                <span>Database Management</span>
+                <span>Advanced Database (SQL)</span>
+                <span>Web Programming (HTML/PHP)</span>
+                <span>E-Commerce (HTML/CSS/JS)</span>
+                <span>Systems Analysis (ISAD)</span>
+                <span>AI for Business</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item: High School ELS -->
+          <div class="timeline-item right">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-badge school-badge">High School Diploma</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2013 – 2024</span>
+              </div>
+              <h3 class="timeline-title">Egyptian Language School (ELS)</h3>
+              <h4 class="timeline-institution">Scientific Division (Mathematics)</h4>
+              <p class="timeline-description">
+                Solid foundation in advanced mathematics, calculus, physics, and analytical problem-solving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">03. Project Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="projects-showcase-grid">
+          <!-- Project 1: Silvex Outdoor Furniture -->
+          <div class="project-glass-card">
+            <div class="card-glow-layer"></div>
+            <div class="project-top-bar">
+              <div class="folder-icon"><i class="fa-solid fa-couch"></i></div>
+              <div class="project-external-links">
+                <a href="https://github.com/moghnymohamed60-bot/Silvex-Outdoor-Furniture" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <span class="project-category-tag">E-Commerce & Catalog Web Platform</span>
+            <h3 class="project-heading">Silvex Outdoor Furniture</h3>
+            <p class="project-summary">
+              A modern digital showcase and catalog platform for luxury outdoor furniture, featuring interactive product galleries, material specifications, and quotation request management.
+            </p>
+            <ul class="project-feature-list">
+              <li><strong>Product Catalog:</strong> Interactive filtering by furniture category, materials, dimensions, and collections.</li>
+              <li><strong>Quote & Inquiry Pipeline:</strong> Direct customer inquiry routing with itemized specification summaries.</li>
+              <li><strong>Responsive Glassmorphic UI:</strong> Optimized for high visual aesthetic, fast loading times, and mobile responsiveness.</li>
+            </ul>
+            <div class="project-tech-badges">
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>HTML5 / CSS3</span>
+              <span>PostgreSQL / MySQL</span>
+              <span>UI/UX Design</span>
+            </div>
+            <div class="project-action-bar">
+              <a href="https://github.com/moghnymohamed60-bot/Silvex-Outdoor-Furniture" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo">
+                <i class="fa-brands fa-github"></i>
+                <span>Open Silvex Outdoor Furniture Repo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Hotel Booking Systems -->
+          <div class="project-glass-card">
+            <div class="card-glow-layer"></div>
+            <div class="project-top-bar">
+              <div class="folder-icon"><i class="fa-solid fa-hotel"></i></div>
+              <div class="project-external-links">
+                <a href="https://github.com/moghnymohamed60-bot/Hotel-Booking-System" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <span class="project-category-tag">Hospitality Management & Booking Engine</span>
+            <h3 class="project-heading">Hotel Booking Systems</h3>
+            <p class="project-summary">
+              An end-to-end hotel reservation and room management platform designed to streamline room allocation, booking schedules, check-in/check-out workflows, and guest analytics.
+            </p>
+            <ul class="project-feature-list">
+              <li><strong>Real-Time Availability:</strong> Automated room status tracking and conflict prevention across date ranges.</li>
+              <li><strong>Reservation Engine:</strong> Role-based access for reception staff and guests with secure booking validation.</li>
+              <li><strong>Database Architecture:</strong> Normalized relational schema modeling rooms, amenities, pricing tiers, and invoices.</li>
+            </ul>
+            <div class="project-tech-badges">
+              <span>Java</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>SQL / PostgreSQL</span>
+              <span>REST APIs</span>
+            </div>
+            <div class="project-action-bar">
+              <a href="https://github.com/moghnymohamed60-bot/Hotel-Booking-System" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo">
+                <i class="fa-brands fa-github"></i>
+                <span>Open Hotel Booking Systems Repo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Caterista -->
+          <div class="project-glass-card">
+            <div class="card-glow-layer"></div>
+            <div class="project-top-bar">
+              <div class="folder-icon"><i class="fa-solid fa-utensils"></i></div>
+              <div class="project-external-links">
+                <a href="https://github.com/moghnymohamed60-bot/Caterista" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <span class="project-category-tag">Catering & Event Food Management System</span>
+            <h3 class="project-heading">Caterista</h3>
+            <p class="project-summary">
+              A dynamic catering management web application enabling users to curate custom event menus, schedule event catering, calculate ingredient budgets, and manage supplier orders.
+            </p>
+            <ul class="project-feature-list">
+              <li><strong>Custom Menu Builder:</strong> Dynamic dish selection and serving-size portion calculation for events.</li>
+              <li><strong>Order Scheduling:</strong> Calendar-based order tracking and automated kitchen preparation timelines.</li>
+              <li><strong>Billing & Invoicing:</strong> Real-time cost estimation, tax breakdowns, and payment status tracking.</li>
+            </ul>
+            <div class="project-tech-badges">
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>PostgreSQL</span>
+              <span>HTML5 / CSS3</span>
+              <span>Systems Analysis</span>
+            </div>
+            <div class="project-action-bar">
+              <a href="https://github.com/moghnymohamed60-bot/Caterista" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo">
+                <i class="fa-brands fa-github"></i>
+                <span>Open Caterista Repo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Travel Reimbursement System -->
+          <div class="project-glass-card">
+            <div class="card-glow-layer"></div>
+            <div class="project-top-bar">
+              <div class="folder-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+              <div class="project-external-links">
+                <a href="https://github.com/moghnymohamed60-bot/Travel-Reimbursement-System" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <span class="project-category-tag">Enterprise Web Application • EGAS Company</span>
+            <h3 class="project-heading">Travel Reimbursement System</h3>
+            <p class="project-summary">
+              A web-based application built for EGAS's Finance Department to streamline employee travel reimbursement requests through an organized multi-role approval workflow and automated calculations.
+            </p>
+            <ul class="project-feature-list">
+              <li><strong>Multi-Role Approval Pipeline:</strong> Implemented request flow across Employee → Manager → Public Relations → Transportation → Timing → Payroll.</li>
+              <li><strong>Core Pages:</strong> Designed Home Dashboard, New Request submission form, real-time Request Tracker, and Payroll approval interface.</li>
+              <li><strong>Automated Calculation:</strong> Dynamic reimbursement computation based on travel duration, transportation, and department allowances.</li>
+              <li><strong>UI/UX Design:</strong> Contributed to mockups using a custom green-and-gold 'Pipeline' design system; collaborated with a team of 11.</li>
+            </ul>
+            <div class="project-tech-badges">
+              <span>PHP</span>
+              <span>JavaScript</span>
+              <span>HTML5 / CSS3</span>
+              <span>PostgreSQL / MySQL</span>
+              <span>Figma UI/UX</span>
+              <span>Team of 11</span>
+            </div>
+            <div class="project-action-bar">
+              <a href="https://github.com/moghnymohamed60-bot/Travel-Reimbursement-System" target="_blank" rel="noopener noreferrer" class="btn btn-project-repo">
+                <i class="fa-brands fa-github"></i>
+                <span>Open Travel Reimbursement System Repo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section (Clean Categorized Cards - No Arbitrary Percentages) -->
+    <section id="skills" class="section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">04. Technical Competencies</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="skills-category-deck">
+          <!-- Category 1: Backend Development -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <div class="group-icon-circle purple"><i class="fa-solid fa-server"></i></div>
+              <div>
+                <h3>Backend Development</h3>
+              </div>
+            </div>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip"><i class="fa-brands fa-java"></i> Java</span>
+              <span class="skill-chip"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+              <span class="skill-chip">Spring Web</span>
+              <span class="skill-chip">Spring Data JPA</span>
+              <span class="skill-chip">Hibernate</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">DTOs & Mapper Pattern</span>
+              <span class="skill-chip">Layered Architecture</span>
+              <span class="skill-chip">Jakarta Validation</span>
+              <span class="skill-chip">Global Exception Handling</span>
+              <span class="skill-chip">PHP</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Databases & SQL -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <div class="group-icon-circle cyan"><i class="fa-solid fa-database"></i></div>
+              <div>
+                <h3>Databases & Data Modeling</h3>
+                <p>Relational Architecture</p>
+              </div>
+            </div>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip"><i class="fa-solid fa-database"></i> SQL (DDL, DML, DCL)</span>
+              <span class="skill-chip">PostgreSQL</span>
+              <span class="skill-chip">H2 Database</span>
+              <span class="skill-chip">ERD & EERD Modeling</span>
+              <span class="skill-chip">Relational Data Model (RDM)</span>
+              <span class="skill-chip">Database Normalization</span>
+              <span class="skill-chip">DBeaver</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Web & Frontend -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <div class="group-icon-circle emerald"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h3>Web & Frontend Technologies</h3>
+                <p>Interface & Client-Side</p>
+              </div>
+            </div>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-chip">E-Commerce & E-Business</span>
+              <span class="skill-chip"><i class="fa-brands fa-figma"></i> Figma (UI/UX & Wireframing)</span>
+              <span class="skill-chip">Human Computer Interaction</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Testing & DevOps -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <div class="group-icon-circle amber"><i class="fa-solid fa-vial-circle-check"></i></div>
+              <div>
+                <h3>Testing, DevOps & Tools</h3>
+                <p>Quality & Workflows</p>
+              </div>
+            </div>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">JUnit 5</span>
+              <span class="skill-chip">Mockito</span>
+              <span class="skill-chip">MockMvc</span>
+              <span class="skill-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="skill-chip"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="skill-chip">Postman</span>
+              <span class="skill-chip">Spring Boot Test</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Software Engineering & Systems Analysis -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <div class="group-icon-circle purple"><i class="fa-solid fa-diagram-project"></i></div>
+              <div>
+                <h3>Software Engineering & Systems</h3>
+                <p>Methodologies & Design</p>
+              </div>
+            </div>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">OOP (Object-Oriented Programming)</span>
+              <span class="skill-chip">SOLID Principles</span>
+              <span class="skill-chip">Clean Code</span>
+              <span class="skill-chip">Design Patterns (Strategy, Mapper)</span>
+              <span class="skill-chip">SDLC</span>
+              <span class="skill-chip">UML Diagrams</span>
+              <span class="skill-chip">CRC Cards (ISAD)</span>
+              <span class="skill-chip">Microservices Fundamentals</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Networking & AI Awareness -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <div class="group-icon-circle cyan"><i class="fa-solid fa-shield-virus"></i></div>
+              <div>
+                <h3>Networking, AI & Business Tools</h3>
+                <p>Security & Business Informatics</p>
+              </div>
+            </div>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">OSI Model & Network Protocols</span>
+              <span class="skill-chip">Firewalls & Traffic Control</span>
+              <span class="skill-chip">DHCP / DNS / NAT / NAC</span>
+              <span class="skill-chip">Generative AI Awareness</span>
+              <span class="skill-chip">Machine Learning Fundamentals</span>
+              <span class="skill-chip">Prompt Engineering</span>
+              <span class="skill-chip">Microsoft Power BI</span>
+              <span class="skill-chip">Microsoft Excel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages & Relevant Coursework Box -->
+        <div class="coursework-box">
+          <div class="coursework-section">
+            <h4><i class="fa-solid fa-language"></i> Spoken Languages</h4>
+            <div class="language-badges">
+              <span class="lang-tag"><strong>Arabic:</strong> Native</span>
+              <span class="lang-tag"><strong>English:</strong> Fluent</span>
+              <span class="lang-tag"><strong>French:</strong> Slightly Fluent</span>
+            </div>
+          </div>
+          <div class="coursework-divider"></div>
+          <div class="coursework-section">
+            <h4><i class="fa-solid fa-book-open"></i> Relevant BIS Coursework at AAST</h4>
+            <p class="coursework-text">
+              Database Management, Advanced Database (SQL), Web Programming (HTML/PHP), Web Design (Figma/UI&UX), E-Commerce & E-Business, AI for Business (ML/Prompt Eng.), Systems Analysis & Design (ISAD), Data Structures, Accounting I & II, Corporate Finance, Business Statistics, Operations Management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Activities Section -->
+    <section id="leadership" class="section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">05. Extracurricular & Impact</span>
+          <h2 class="section-title">Activities & Leadership</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="leadership-grid">
+          <!-- AIESEC Card -->
+          <div class="leadership-card">
+            <div class="leadership-header">
+              <div class="leadership-icon cyan"><i class="fa-solid fa-globe"></i></div>
+              <div>
+                <h3>AIESEC – AAST Cairo</h3>
+                <span class="leadership-role">Member & Middle Manager (B2B Department)</span>
+              </div>
+            </div>
+            <ul class="leadership-list">
+              <li>Joined as an Incoming Global Volunteer (iGV) member, contributing to youth-led international volunteer programs.</li>
+              <li>Promoted to <strong>Middle Manager</strong> in the Business-to-Business (B2B) department, overseeing client relationships and partnership coordination.</li>
+              <li>Developed strong communication, negotiation, and cross-functional team leadership skills within a global youth organization.</li>
+            </ul>
+          </div>
+
+          <!-- Heliopolis Club Card -->
+          <div class="leadership-card">
+            <div class="leadership-header">
+              <div class="leadership-icon purple"><i class="fa-solid fa-trophy"></i></div>
+              <div>
+                <h3>Heliopolis Sporting Club (HSC)</h3>
+                <span class="leadership-role">Organization Committee Member (Youth Community - 2024)</span>
+              </div>
+            </div>
+            <ul class="leadership-list">
+              <li>Served on the organizing committee for the <strong>5th Heliopolis Special Ability Tournament (2024)</strong>, supporting inclusion and accessibility in sport.</li>
+              <li>Contributed to event logistics and coordination for the <strong>28th Heliopolis International Tournament for Water Polo & Artistic Swimming</strong>, managing scheduling and volunteer activities.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">06. Communication</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="contact-grid-container">
+          <div class="contact-info-panel">
+            <h3 class="contact-headline">Let's connect & collaborate.</h3>
+            <p class="contact-text">
+              I am actively seeking software engineering internships, junior full-stack / backend developer opportunities, and academic collaborations. Feel free to reach out directly via email, phone, or LinkedIn!
+            </p>
+
+            <div class="contact-cards-stack">
+              <!-- Copy Email Card -->
+              <div class="contact-item-card" id="card-copy-email">
+                <div class="contact-icon cyan"><i class="fa-regular fa-envelope"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-label">Email Address (Click to copy)</span>
+                  <span class="contact-value">moghnymohamed60@gmail.com</span>
+                </div>
+                <i class="fa-regular fa-copy copy-hint-icon"></i>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/mohamed-moghny-596735390" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                <div class="contact-icon purple"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-label">LinkedIn Profile</span>
+                  <span class="contact-value">mohamed-moghny-596735390</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square copy-hint-icon"></i>
+              </a>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com/moghnymohamed60-bot" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                <div class="contact-icon cyan"><i class="fa-brands fa-github"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">moghnymohamed60-bot</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square copy-hint-icon"></i>
+              </a>
+
+              <!-- Location Card -->
+              <div class="contact-item-card">
+                <div class="contact-icon amber"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Cairo, Egypt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="cyber-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="user_name">Your Name <span class="required">*</span></label>
+                  <input type="text" id="user_name" name="user_name" placeholder="e.g. Sarah Jenkins" required>
+                </div>
+                <div class="form-group">
+                  <label for="user_email">Your Email <span class="required">*</span></label>
+                  <input type="email" id="user_email" name="user_email" placeholder="e.g. sarah@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="user_subject">Subject <span class="required">*</span></label>
+                <input type="text" id="user_subject" name="user_subject" placeholder="Opportunity / Project Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="user_message">Message <span class="required">*</span></label>
+                <textarea id="user_message" name="user_message" rows="5" placeholder="Hi Mohamed, I would love to connect regarding..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Send Message</span>
+                <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+
+            <div id="form-success-box" class="form-success-card hidden">
+              <div class="success-icon-ring">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h4>Message Received!</h4>
+              <p>Thank you for reaching out, Mohamed will reply as soon as possible.</p>
+              <button id="send-another-btn" class="btn btn-secondary btn-sm">Send Another Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-accent">&lt;</span>Moghny<span class="logo-accent"> /&gt;</span>
+        </a>
+        <p class="footer-tagline">Mohamed Abdel Moghny • Junior Full-Stack Developer & BIS Undergrad @ AAST.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/mohamed-moghny-596735390" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/moghnymohamed60-bot" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:moghnymohamed60@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Mohamed Abdel Moghny. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll back to top" title="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Application Script -->
+  <script src="script.js"></script>
+</body>
+</html>
